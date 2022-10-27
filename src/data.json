@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": "0",
+      "name": "Rep Sports Bra Small Logo - Forest",
+      "price": "$70.00",
+      "availableColors": ["Nile Blue"],
+      "availableSizes": ["XS", "S", "M", "L", "XL", "2XL"],
+      "previewVideo": {
+        "url": "https://cdn.shopify.com/s/files/1/0242/0156/0160/t/36/assets/4f332b27-3c5f-445e-b585-ddbe97771db4_preview.mp4"
+      },
+      "video": {
+        "url": "https://cdn.shopify.com/s/files/1/0242/0156/0160/t/36/assets/4f332b27-3c5f-445e-b585-ddbe97771db4_640.mp4"
+      },
+      "gallery": [
+        {
+          "id": "0",
+          "url": "https://cdn.shopify.com/s/files/1/0242/0156/0160/products/06-16Studio-YogaDay_007.jpg?v=1655719012"
+        },
+        {
+          "id": "1",
+          "url": "https://cdn.shopify.com/s/files/1/0242/0156/0160/products/06-16Studio-YogaDay_009.jpg?v=1655719012"
+        },
+        {
+          "id": "2",
+          "url": "https://cdn.shopify.com/s/files/1/0242/0156/0160/products/06-16Studio-YogaDay_001.jpg?v=1655719012"
+        }
+      ]
+    }
+  ]
+}
