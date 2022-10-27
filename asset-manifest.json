@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/test-styled-components-react-player/static/css/main.b3956362.css",
+    "main.js": "/test-styled-components-react-player/static/js/main.10e8ea3a.js",
+    "static/js/787.2244cd01.chunk.js": "/test-styled-components-react-player/static/js/787.2244cd01.chunk.js",
+    "static/media/logo.svg": "/test-styled-components-react-player/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/slick.svg": "/test-styled-components-react-player/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/test-styled-components-react-player/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/test-styled-components-react-player/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/test-styled-components-react-player/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/test-styled-components-react-player/index.html",
+    "main.b3956362.css.map": "/test-styled-components-react-player/static/css/main.b3956362.css.map",
+    "main.10e8ea3a.js.map": "/test-styled-components-react-player/static/js/main.10e8ea3a.js.map",
+    "787.2244cd01.chunk.js.map": "/test-styled-components-react-player/static/js/787.2244cd01.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3956362.css",
+    "static/js/main.10e8ea3a.js"
+  ]
+}
