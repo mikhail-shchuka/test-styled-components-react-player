@@ -1,6 +1,6 @@
 import ReactPlayer from "react-player";
 import styled, { css, keyframes } from "styled-components";
-import { IconCross } from "./IconCross";
+import { IconCross } from "./ui/IconCross";
 
 type PopUpPlayerProps = {
   left?: boolean;
@@ -71,7 +71,8 @@ const PopUpPlayerStyled = styled.button<PopUpPlayerProps>`
     object-fit: cover;
     object-position: center;
     border-radius: 15px;
-    
+    box-shadow: 0px 4px 20px rgb(0 0 0 / 15%);
+
     @media ${(props) => props.theme.media.phone} {
       border-radius: 50%;
     }
@@ -96,9 +97,15 @@ const Button = styled.a`
   align-items: center;
   text-align: center;
   line-height: 22px;
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 20%);
 
   transition: 0.7s;
   transition-delay: -0.1s;
+
+  @media ${(props) => props.theme.media.phone} {
+    top: 1px;
+    right: 1px;
+  }
 
   & > * {
     display: none;

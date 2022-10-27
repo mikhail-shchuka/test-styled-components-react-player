@@ -1,16 +1,16 @@
 import styled, { css } from "styled-components";
 import { Carousel } from "./Carousel";
 
-import { Select } from "./Select";
-
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { CustomSelect } from "./CustomSelect";
 
 const InfoCardStyled = styled.div`
   height: 100%;
+  max-height: 100vh;
   display: inline-block;
   overflow: hidden auto;
-  padding: 24px;
+  padding: 24px 32px;
   box-sizing: border-box;
 
   @media ${(props) => props.theme.media.phone} {
@@ -52,7 +52,6 @@ const Price = styled.div`
   font-weight: 700;
   overflow-wrap: break-word;
   user-select: none;
-  text-align: center;
 `;
 
 const SelectContainer = styled.div`
@@ -66,7 +65,7 @@ const SelectContainer = styled.div`
 export const Button = styled.button<{ white?: boolean }>`
   background: rgb(9, 10, 11);
   border-radius: 10px;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   width: 100%;
   height: 50px;
   color: #fff;
@@ -101,13 +100,13 @@ export const InfoCard: React.FC<Props> = ({ product }) => {
         <div>
           <SelectContainer>
             <span>Color</span>
-            <Select options={product.availableColors} />
+            <CustomSelect options={product.availableColors} />
           </SelectContainer>
           <SelectContainer>
             <span>Size</span>
-            <Select options={product.availableSizes} />
+            <CustomSelect options={product.availableSizes} />
           </SelectContainer>
-          <Button>Buy now</Button>
+          <Button>Add to cart</Button>
           <Button white>Product details</Button>
         </div>
       </Container>

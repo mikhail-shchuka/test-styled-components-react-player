@@ -3,6 +3,7 @@ import { Button } from "./InfoCard";
 
 const Container = styled.div`
   position: absolute;
+  z-index: 1;
   bottom: 15px;
   left: 15px;
   right: 15px;
@@ -10,6 +11,7 @@ const Container = styled.div`
   justify-content: flex-start;
   gap: 8px;
   background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
   border-radius: 10px;
 `;
 
@@ -19,6 +21,7 @@ const Title = styled.div`
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 `;
 
 const ProductName = styled.div`
@@ -27,16 +30,20 @@ const ProductName = styled.div`
   font-weight: normal;
   letter-spacing: unset;
   color: #fff;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 const Price = styled(ProductName)`
-font-weight: 700;
-`
+  font-weight: 700;
+`;
 const SmallButton = styled(Button)`
-width: 66px;
-height: 28px;
-align-self: flex-end;
-`
+  width: 66px;
+  height: 28px;
+  align-self: flex-end;
+`;
 
 type Props = {
   product: any;

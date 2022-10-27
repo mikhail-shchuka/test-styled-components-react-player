@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { NextArrow, PrevArrow } from "./ui/Arrows";
 
 type Props = {
   images: Array<{
@@ -17,6 +18,8 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  prevArrow: <PrevArrow />,
+  nextArrow: <NextArrow />,
 };
 
 const ImgContainer = styled.div`
@@ -38,7 +41,7 @@ export const Carousel: React.FC<Props> = ({ images }) => {
               alt={img.id}
               width="170px"
               height="220px"
-              style={{ borderRadius: "50px" }}
+              style={{ borderRadius: "16px" }}
             />
           </ImgContainer>
         </div>

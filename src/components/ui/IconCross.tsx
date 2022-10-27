@@ -7,7 +7,7 @@ type Props = {
 export const IconCross: React.FC<Props> = ({
   width = "10px",
   height = "10px",
-  color = 'white'
+  color = "white",
 }) => {
   return (
     <svg

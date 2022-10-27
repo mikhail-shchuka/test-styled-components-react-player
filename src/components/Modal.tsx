@@ -1,10 +1,10 @@
 import ReactPlayer from "react-player";
+import { useMediaQuery } from "react-responsive";
 import styled, { keyframes } from "styled-components";
-import { useMediaQuery } from 'react-responsive'
 
-import { IconCross } from "./IconCross";
 import { InfoCard } from "./InfoCard";
 import { PhoneInfoCard } from "./PhoneInfoCard";
+import { IconCross } from "./ui/IconCross";
 
 type ModalProps = {
   left?: boolean;
@@ -35,7 +35,6 @@ const ModalStyled = styled.div<ModalProps>`
     (props.left && "left bottom") || "right bottom"};
 
   animation: ${entryAnimation} 0.3s;
-
 `;
 
 const Player = styled.div`
@@ -45,6 +44,9 @@ const Player = styled.div`
 
   @media ${(props) => props.theme.media.phone} {
     width: 100%;
+    & video {
+      object-fit: cover;
+    }
   }
   @media ${(props) => props.theme.media.tablet} {
     width: 60%;
@@ -55,25 +57,25 @@ const Player = styled.div`
 `;
 
 const ButtonClose = styled.button`
-  background: #fff;
   padding: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid gray;
   border-radius: 8px;
   cursor: pointer;
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.2);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  &:hover {
-    & > svg {
-      transform: scale(1.2);
-    }
+  @media ${(props) => props.theme.media.phone} {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255);
   }
 `;
 
@@ -84,18 +86,15 @@ type Props = {
   product: any;
 };
 
-
 export const Modal: React.FC<Props> = ({ onCloseModal, product, ...props }) => {
-
   const isPhone = useMediaQuery({
-    query: '(max-width: 600px)'
-  })
-
+    query: "(max-width: 600px)",
+  });
 
   return (
     <ModalStyled {...props}>
       <Player>
-        {isPhone && <PhoneInfoCard product={product}/>}
+        {isPhone && <PhoneInfoCard product={product} />}
         <ReactPlayer
           url={product.video.url}
           playing
@@ -108,7 +107,7 @@ export const Modal: React.FC<Props> = ({ onCloseModal, product, ...props }) => {
       </Player>
       <InfoCard product={product} />
       <ButtonClose onClick={onCloseModal}>
-        <IconCross width="20px" height="20px" color="#000" />
+        <IconCross width="13px" height="13px" color="#000" />
       </ButtonClose>
     </ModalStyled>
   );

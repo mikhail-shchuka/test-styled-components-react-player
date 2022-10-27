@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
-import "./App.css";
 import { Modal } from "./components/Modal";
 import { PopUpPlayer } from "./components/PopupPlayer";
 import data from "./data.json";
-import logo from "./logo.svg";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -28,6 +26,7 @@ function App() {
 
   const closeModal = () => {
     setModal(false);
+    setPopUp(true);
   };
 
   const theme = {
@@ -40,22 +39,6 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
       {popUp && (
         <PopUpPlayer
           onOpenModal={openModal}
